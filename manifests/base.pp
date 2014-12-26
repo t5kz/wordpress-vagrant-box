@@ -21,7 +21,7 @@ package {"libmysqlclient-dev":
 
 # Download WordPress
 exec {"download_wordpress":
-	command => "wget http://wordpress.org/latest.tar.gz",
+	command => "wget https://wordpress.org/latest.tar.gz --no-check-certificate",
 	cwd     => "/tmp",
 	creates => "/tmp/latest.tar.gz",
 	path    => ["/usr/bin", "/bin", "/usr/local/bin"],
